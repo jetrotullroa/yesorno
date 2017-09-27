@@ -6,7 +6,7 @@ const keys = require('./config/keys');
 
 // MODEL
 require('./models/User')
-
+const mongoURI = 'mongodb://admin:password@ds149844.mlab.com:49844/jetspree_test'
 mongoose.connect(keys.mongoURI);
 
 // SERVICES
