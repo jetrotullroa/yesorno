@@ -5,4 +5,5 @@ module.exports = {
   cookieKeys: 'qEmaily$8765432',
   stripePublishableKey: 'pk_test_JLyHvoFkeHZ0pTCd2IhFlN8O',
   stripeSecretKey: 'sk_test_HtrdOYES4TWRqTZskRyBTgis',
+  sendGridKey: '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'
 }
