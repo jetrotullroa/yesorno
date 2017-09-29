@@ -8,6 +8,7 @@ const keys = require('./config/keys');
 
 // MODEL
 require('./models/User')
+require('./models/Survey')
 const mongoURI = 'mongodb://admin:password@ds149844.mlab.com:49844/jetspree_test'
 mongoose.connect(keys.mongoURI);
 
@@ -31,6 +32,7 @@ app.use(passport.session())
 // ROUTES
 require('./routes/authRoutes')(app);
 require('./routes/billingRoutes')(app)
+require('./routes/surveyRoutes')(app)
 
 if (process.env.NODE_ENV === 'production') {
 
