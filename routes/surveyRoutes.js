@@ -66,13 +66,13 @@ module.exports = app => {
       })
       .value()
 
-    console.log(events)
-
     res.send({})
   })
 
   app.get('/api/surveys', requireLogin, async (req, res) => {
-    const surveys = await Survey.find({ _user: req.user.id }).select({ recipients: false })
+    const surveys = await Survey.find({ _user: req.user.id })
+      .sort({ dateSent: -1 })
+      .select({ recipients: false })
     res.send(surveys)
   })
 }
